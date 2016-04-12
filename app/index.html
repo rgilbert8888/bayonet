@@ -26,6 +26,7 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+  <div class="page-top">
     <div class="header-logo">
       <a href=""><img src="http://www.recsinc.com/artwork/bayonet.png" alt=""></a>
     </div>
@@ -46,6 +47,7 @@
         </div>
       </div>
     </div>
+  </div>
 
 
 
@@ -141,14 +143,13 @@
     </div>
   </section>
   <section id="big-squares">
+    <div class="rock-overlay"></div>
     <div class="container">
       <div class="row">
-        <div class="col">
-
-            <img src="images/cat.jpg" class="">
-
+        <div class="col image-col">
+          <img src="images/cat.jpg" class="">
         </div>        
-        <div class="col">
+        <div class="col patents-col">
           <div>
             <h4>PATENTS</h4>
             <ul class="patents">
@@ -159,29 +160,28 @@
             </ul>
           </div>
         </div>      
-        <div class="col">
+        <div class="col specs-col">
           <div>
             <h4>MORE STUFF</h4>
             <p>More Text Here.</p>
           </div>
-          
-          <!-- <p>
-            <ul>
-              <li>No quick disconnect</li>
-              <li>Low maintenance</li>
-              <li>Designed for most models of excavators and rubber tire backhoes</li>
-            </ul>
-          </p> -->
         </div>
  
         <div class="col video-col">
           <div class="videoWrapper">
             <div id="player"></div>
-           <!--  <iframe width="400" height="270" src="http://www.youtube.com/embed/CwgMtXH9ni0?autohide=1&showinfo=0" frameborder="0" allowfullscreen=""></iframe> -->
           </div>
-          <!-- <div><img src="http://bayonetbreaker.com/images/Picture-429.jpg" alt=""></div> -->
         </div>        
       </div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="sheer-overlay"></div>
+    <div class="container">
+      <div class="row">
+
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, facilis, delectus? Quisquam magnam vero hic quod doloribus deserunt temporibus illo reiciendis, similique, enim sunt modi cupiditate. Obcaecati adipisci, eum ipsa.</p>
+      </row>
     </div>
   </section>
 
@@ -232,56 +232,7 @@
     
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
-    <script>
-      // 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
 
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-      // 3. This function creates an <iframe> (and YouTube player)
-      //    after the API code downloads.  constructs a YT.Player object 
-      //    to insert a video player on your page
-      var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '390',
-          width: '640',
-          videoId: 'CwgMtXH9ni0',
-         playerVars: { 
-           'autoplay': 0,
-           'controls': 1, 
-           'rel' : 0    // indicates whether the player should show related videos when playback ends/ 1=true
-          },
-          events: {
-            'onReady': onPlayerReady
-            // 'onStateChange': onPlayerStateChange
-          }
-        });
-      }
-
-      // 4. The API will call this function when the video player is ready.
-      function onPlayerReady(event) {
-       console.log('ready');
-      }
-
-      // 5. The API calls this function when the player's state changes.
-      //    The function indicates that when playing a video (state=1),
-      //    the player should play for six seconds and then stop.
-
-      // var done = false;
-      // function onPlayerStateChange(event) {
-      //   if (event.data == YT.PlayerState.PLAYING && !done) {
-      //     setTimeout(stopVideo, 6000);
-      //     done = true;
-      //   }
-      // }
-
-      function stopVideo() {
-        player.stopVideo();
-      }
-    </script>
     <!-- endbuild -->
   </body>
 </html>
