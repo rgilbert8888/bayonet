@@ -259,7 +259,7 @@ ol.carousel-indicators {
 #specs {
   /*background-color: #707070;*/
   text-align: center;
-  background-color:  #0D5F9E;
+  /*background-color:  #0D5F9E;*/
   color: white;
 
   h4 {
@@ -286,8 +286,70 @@ ol.carousel-indicators {
     }
   }
 
-  .spec-content {
-    margin-top: auto;
+  .specs-table {
+    text-align: center; 
+    border:6px solid #0D5F9E;
+    -moz-box-shadow: 0 2px 8px 0 rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 2px 8px 0 rgba(0,0,0,.5);
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,.5);
+    
+    .specs-table-header {
+      padding: 0px;
+      background-color: #0D5F9E;
+
+      .heading {
+        display: inline-block;
+        width: 100%;
+        padding: 15px 0px 0px 0px;
+        text-transform: uppercase;
+      }
+
+      .value {
+        display: inline-block;
+        width: 100%;
+        padding: 20px 0px 20px 0px;
+        background-color: #084A7C;
+
+        h4 {
+          margin: 0; 
+          padding: 0;
+        }
+      }
+    }
+
+    .specs-table-features {
+      /*background: #fff;*/
+      p { 
+        color: #646464;
+        padding: 5px;
+        margin-top: 5px;
+        font-size: 110%;
+        font-weight: 400;
+        /*background: #fff;*/
+      }
+
+      p:first-child {
+            border-bottom: 1px solid #BDC3C7;
+      }
+    }
+
+
+    .specs-table-button {
+          /*border-top: 1px solid #BDC3C7;*/
+      padding: 10px 20px;
+      text-align: center;
+
+        .btn {
+          background-color: #F6BA04;
+          border-color: #F6BA08;
+          color: #121111;
+        }
+    }
+
+
+
+
+
   }
 
 }
