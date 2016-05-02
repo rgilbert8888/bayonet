@@ -25,15 +25,24 @@
     <!-- endbuild -->
 
     <style>
-    .circle-text, #map {
-     width: 200px;
-    height: 200px;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    background: #4679BD;
-}
-</style>
+
+
+    .gm-style .gm-style-iw {
+       font-size: 10px;
+    }
+
+/*    #map div.gmnoprint,
+    #map div.gmnoscreen,
+    #map2 div.gmnoprint,
+    #map2 div.gmnoscreen {
+        display: none;      
+    }*/
+.gm-style-cc { display:none; }
+/*img[src="http://maps.gstatic.com/mapfiles/google_white.png"] {
+    display: none; 
+}*/
+
+  </style>
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -352,17 +361,37 @@
           </div> <!-- /specs row -->
           <br><br>
           
-          <div class="row" id="">    
-            <br>
-            <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+          <div class="row" id="contact-us">    
+          <!-- <button onclick="alert(map.getZoom());">Get Zoom</button> -->
+            <!-- <br> -->
+            <div class="contact-item map">
               <div id="map-canvas" class="circle-text">
-              <div id="map"></div>
-            </div>
+                <div id="map"></div>
+              </div>
             </div>            
-            <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+            <div class="contact-item address">
               <h3>Find Us</h3>
-              <p>stuff</p>
+              <p>PROSPER LOCATION
+                430 Hays Road
+                Prosper, TX 75078 (physical)
+                P.O. Box 520
+                Prosper, TX 75078 (mailing)
+                972-346-3226
+                972-347-2841
+                Fax-972-346-2600</p>
+                <p>
+               RAINBOW LOCATION
+                4952A Hwy 67E
+                Rainbow, TX 76077
+                254-898-0566
+                Fax-254-898-0497
+            </p>
             </div>
+            <div class="contact-item map">
+              <div id="map-canvas" class="circle-text">
+                <div id="map2"></div>
+              </div>
+            </div>  
           </div> <!-- /contact row -->
           <!-- <hr> -->
 
@@ -508,16 +537,70 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
     <!-- endbuild -->
     <script>
-      var map;
+
+      var map, map2;
+      var lat1 = {lat: 33.239547, lng: -96.7863377},
+          lat2 = {lat:  32.268104, lng: -97.68217500000003 };
+      var placeId = 'ChIJJZaZrJs_TIYRAfap06LN3R0';
+      var placeId2 = 'ChIJMdcdnyQvToYRo-nA3tjQwno';
+
       function initMap() {
+
+        var options = {
+          disableDefaultUI:true,
+          zoom: 21,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+             scrollwheel: false
+        }
+
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
+          center: lat1,
+          options
+        });        
+        map2 = new google.maps.Map(document.getElementById('map2'), {
+          center: lat2,
+          options
+        });
+
+        var geocoder = new google.maps.Geocoder;
+        var infowindow1 = new google.maps.InfoWindow({
+          maxWidth: 75
+        });
+        var infowindow2 = new google.maps.InfoWindow({
+          maxWidth: 75
+        });
+
+        geocodePlaceId(geocoder, map, infowindow1, placeId);
+        geocodePlaceId(geocoder, map2, infowindow2, placeId2);
+      }
+
+      function geocodePlaceId(geocoder, map, infowindow, placeId) {
+        geocoder.geocode({'placeId': placeId}, function(results, status) {
+          if (status === google.maps.GeocoderStatus.OK) {
+            console.log(results);
+            if (results[0]) {
+              map.setZoom(5);
+              map.setCenter(results[0].geometry.location);
+              var marker = new google.maps.Marker({
+                map: map,
+                position: results[0].geometry.location
+              });
+              infowindow.setContent(results[0].formatted_address);
+              infowindow.open(map, marker);
+              console.log(infowindow);
+            } else {
+              window.alert('No results found');
+            }
+          } else {
+            window.alert('Geocoder failed due to: ' + status);
+          }
         });
       }
+
+
     </script>
-       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA14CxnGqqgtwkr_LQt9iT4L8hePZa4-pQ&callback=initMap"
-    async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA14CxnGqqgtwkr_LQt9iT4L8hePZa4-pQ&libraries=places&callback=initMap"
+        async defer></script>    
     <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA14CxnGqqgtwkr_LQt9iT4L8hePZa4-pQ&libraries=visualization&callback=initMap"></script> -->
 
     <!-- build:js scripts/main.js -->
