@@ -193,6 +193,7 @@
               <br><br>
             </div>
           </div> <!-- /features row -->
+          
           <hr>
           
           <div class="row" id="news">    
@@ -230,7 +231,8 @@
               <p>stuff</p>
             </div>            
           </div> <!-- /news row -->
-          <!-- <hr> --><br><br>
+          
+          <br><br>
           
           <div class="row" id="specs">    
             <br>
@@ -359,86 +361,52 @@
               </div> 
             </div>        
           </div> <!-- /specs row -->
+          
           <br><br>
           
-          <div class="row" id="contact-us">    
-          <!-- <button onclick="alert(map.getZoom());">Get Zoom</button> -->
-            <!-- <br> -->
-            <div class="contact-item map">
-              <div id="map-canvas" class="circle-text">
-                <div id="map"></div>
-              </div>
-            </div>            
-            <div class="contact-item address">
+          <div class="row" id="contact-us">   
+            <div class="col-md-12">
               <h3>Find Us</h3>
-              <p>PROSPER LOCATION
-                430 Hays Road
-                Prosper, TX 75078 (physical)
-                P.O. Box 520
-                Prosper, TX 75078 (mailing)
-                972-346-3226
-                972-347-2841
-                Fax-972-346-2600</p>
-                <p>
-               RAINBOW LOCATION
-                4952A Hwy 67E
-                Rainbow, TX 76077
-                254-898-0566
-                Fax-254-898-0497
-            </p>
-            </div>
-            <div class="contact-item map">
-              <div id="map-canvas" class="circle-text">
-                <div id="map2"></div>
-              </div>
-            </div>  
+              <div class="row contact-row">
+                
+                <div class="col-xs-12 col-sm-4 col-lg-4 contact-item">
+                    <address>
+                    <h5>PROSPER LOCATION</h5> 
+                      430 Hays Road<br>
+                      Prosper, TX 75078 (physical)<br>
+                      <br>
+                      P.O. Box 520<br>
+                      Prosper, TX 75078 (mailing)<br>
+                      <br>
+                      972-346-3226<br>
+                      972-347-2841<br>
+                      Fax-972-346-2600<br>
+                    </address>
+                </div> 
+                <div class="col-xs-12 col-sm-4 col-lg-4 contact-item">
+                  <div id="map-canvas">
+                      <div id="map"></div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-lg-4 contact-item">
+                    <address>
+                    <h5>RAINBOW LOCATION</h5>
+                      4952A Hwy 67E<br>
+                      Rainbow, TX 76077<br>
+                      <br>
+                      254-898-0566<br>
+                      Fax-254-898-0497<br>
+                    </address>
+                </div>  
+              </div> <!-- /inner contact- row -->
+            </div>  <!-- /COL 12 -->
           </div> <!-- /contact row -->
-          <!-- <hr> -->
 
-<!--           <div class="row">    
-            <br>
-            <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="http://api.randomuser.me/portraits/thumb/women/56.jpg" style="width:100px;height:100px" class="img-circle"></a>
-            </div>
-            <div class="col-md-10 col-sm-9">
-              <h3>Dramatically Raise the Value of Any Piece of Content with These 27 Tactics</h3>
-              <div class="row">
-                <div class="col-xs-9">
-                  <h4><span class="label label-default">searchenginewatch.com</span></h4><h4>
-                  <small style="font-family:courier,'new courier';" class="text-muted">2 days ago • <a href="#" class="text-muted">Read More</a></small>
-                  </h4></div>
-                <div class="col-xs-3"></div>
-              </div>
-              <br><br>
-            </div>
-          </div>
-          <hr>
           
-          <div class="row">    
-            <br>
-            <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="http://api.randomuser.me/portraits/thumb/men/29.jpg" style="width:100px;height:100px" class="img-circle"></a>
-            </div>
-            <div class="col-md-10 col-sm-9">
-              <h3>TrendPaper - What's Trending in the World</h3>
-              <div class="row">
-                <div class="col-xs-9">
-                  <h4><span class="label label-default">betali.st</span></h4><h4>
-                  <small style="font-family:courier,'new courier';" class="text-muted">Last week • <a href="#" class="text-muted">Read More</a></small>
-                  </h4></div>
-                <div class="col-xs-3"></div>
-              </div>
-              <br><br>
-            </div>
-          </div>
-          <hr> -->
+        <!--/stories-->
 
-
-          <!--/stories-->
+          <a href="/" class="btn btn-success">More <i class="glyphicon glyphicon-chevron-right"></i></a>
           
-          
-          <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
-        
           
         </div> <!-- /panel body -->
       </div> <!-- /panel -->                    
@@ -495,7 +463,7 @@
 </div>
 
 
-<!-- AIzaSyA14CxnGqqgtwkr_LQt9iT4L8hePZa4-pQ -->
+
 
 
 
@@ -515,7 +483,6 @@
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
-
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
@@ -536,76 +503,16 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
     <!-- endbuild -->
-    <script>
-
-      var map, map2;
-      var lat1 = {lat: 33.239547, lng: -96.7863377},
-          lat2 = {lat:  32.268104, lng: -97.68217500000003 };
-      var placeId = 'ChIJJZaZrJs_TIYRAfap06LN3R0';
-      var placeId2 = 'ChIJMdcdnyQvToYRo-nA3tjQwno';
-
-      function initMap() {
-
-        var options = {
-          disableDefaultUI:true,
-          zoom: 21,
-          mapTypeId: google.maps.MapTypeId.ROADMAP,
-             scrollwheel: false
-        }
-
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: lat1,
-          options
-        });        
-        map2 = new google.maps.Map(document.getElementById('map2'), {
-          center: lat2,
-          options
-        });
-
-        var geocoder = new google.maps.Geocoder;
-        var infowindow1 = new google.maps.InfoWindow({
-          maxWidth: 75
-        });
-        var infowindow2 = new google.maps.InfoWindow({
-          maxWidth: 75
-        });
-
-        geocodePlaceId(geocoder, map, infowindow1, placeId);
-        geocodePlaceId(geocoder, map2, infowindow2, placeId2);
-      }
-
-      function geocodePlaceId(geocoder, map, infowindow, placeId) {
-        geocoder.geocode({'placeId': placeId}, function(results, status) {
-          if (status === google.maps.GeocoderStatus.OK) {
-            console.log(results);
-            if (results[0]) {
-              map.setZoom(5);
-              map.setCenter(results[0].geometry.location);
-              var marker = new google.maps.Marker({
-                map: map,
-                position: results[0].geometry.location
-              });
-              infowindow.setContent(results[0].formatted_address);
-              infowindow.open(map, marker);
-              console.log(infowindow);
-            } else {
-              window.alert('No results found');
-            }
-          } else {
-            window.alert('Geocoder failed due to: ' + status);
-          }
-        });
-      }
-
-
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA14CxnGqqgtwkr_LQt9iT4L8hePZa4-pQ&libraries=places&callback=initMap"
-        async defer></script>    
-    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA14CxnGqqgtwkr_LQt9iT4L8hePZa4-pQ&libraries=visualization&callback=initMap"></script> -->
 
     <!-- build:js scripts/main.js -->
     <!-- <script src="scripts/main.js"></script> -->
-
     <!-- endbuild -->
+
+    <script src="/scripts/maps.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA14CxnGqqgtwkr_LQt9iT4L8hePZa4-pQ&libraries=places&callback=initMap"
+        async defer></script>    
+
+
+
   </body>
 </html>
