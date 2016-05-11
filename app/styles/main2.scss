@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300);
 @import 'partials/_colors';
 @import 'partials/_mixins';
 
@@ -68,6 +69,8 @@ div.bg-design {
 -------------------------------------------------- */
 
 body {
+  background-color: $body-bg-color;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;;
 }
 
 .panel {
@@ -84,15 +87,31 @@ hr.no-border {
 
 span.underline {
   display: block;
-  width: 30%;
-  border-top: 3px solid white;
-  margin: 10px auto 15px auto;
+  width: 100px;
+  border-top: 4px solid $logo-yellow;
+  margin: 4px auto 10px auto;
 }
 
-h3 {
-  margin-bottom: 8px;
+/*h3 {
+  margin-bottom: 15px;
+  border: 1px solid;
+}
+*/
+.heading3 {
+  width: 100%;
+  text-align: center;
+
+  h3 {
+    display: inline-block;
+    color: $h3-grey !important;
+
+  }
 }
 
+  h4 {
+    color: $bg-color;
+        /*text-shadow: 0 .5px .5px rgba(0, 0, 0, 0.6);*/
+  }
 
 /* NAVBAR
 -------------------------------------------------- */
@@ -152,7 +171,25 @@ h3 {
 
 /* FOOTER
 -------------------------------------------------- */
+footer {
 
+  color: #e5e5e5;
+
+  h4 {
+    color: #e5e5e5;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 10px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+
+}
 
 
 /* CUSTOMIZE THE CAROUSEL
@@ -222,14 +259,27 @@ ol.carousel-indicators {
   h3, h4 {
     text-align: center;
   }
+  a {
+    text-decoration: underline;
+  /*  color: $link-blue;*/
+  }
 }
 
 /*=========================*/ 
 #news {
+  @include style-this-div($bg-grey, $brdr-grey);
+
   ul {
     list-style: none;
     padding: 0;
     margin: 0 auto;
+    color:$bg-color;
+  }
+
+  h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 15px auto;
   }
 }
 
@@ -237,13 +287,14 @@ ol.carousel-indicators {
 
 #specs {
 
-  @include style-this-div($bg-lt-grey, $brdr-lt-grey);
+  @include style-this-div($bg-lt-grey, $bg-grey);
 
   text-align: center;
   color: white;
 
   h4 {
     margin-bottom: 0;
+    color: $nav-links;
   }
 
 
@@ -330,6 +381,7 @@ ol.carousel-indicators {
 
 #contact-us {
 
+
   .contact-row {
     display: flex;
     align-items: stretch;
@@ -343,7 +395,7 @@ ol.carousel-indicators {
       align-content: stretch;
       flex-direction: column;
       margin: 0 auto;
-      justify-content: space-around;
+      justify-content: flex-start;
 
       address {
         text-align: center;
@@ -359,6 +411,7 @@ ol.carousel-indicators {
         margin: 0 auto;
         width: 300px;
         height: 300px;
+        border:1px solid $brdr-grey;
        /* overflow: hidden;
         position: relative;*/
       }
