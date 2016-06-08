@@ -14,6 +14,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main2.css">
     <link rel="stylesheet" href="styles/styles.css">
@@ -34,9 +35,73 @@
 
     .gm-style-cc { display:none; }
 
+
+    .panel {
+      border: 0;
+      margin-top: -40px;
+    }
+
+    .panel-body {
+      padding-top: 0;
+      padding-bottom: 0;
+
+    }
+
+    .flex-row {
+      display: flex;
+      flex-wrap: wrap;
+     /* align-items: center;*/
+    }
+
+    .flex-row .col {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      justify-content: space-around;
+
+      padding: 8% 4%;
+    }
+
+    .flex-row .col ul {
+      margin: 0;
+      list-style: none;
+      text-align: center;
+      /*font-weight: bold;*/
+      font-family: 'Noto Sans', sans-serif;
+      padding: 0;
+     
+      font-size: 20px;
+
+    }
+
+        .flex-row .col ul  li {
+          padding: 3% 0;
+        }
+
+
+    .flex-row .col:first-child {
+      background-color: #0D5F9E;
+      
+    }    
+
+    .flex-row .col:first-child h3 {
+      margin: 0 auto;
+      font-size: 36px;
+      color: white;
+      /*font-weight: bold;*/
+      font-family: 'Noto Sans', sans-serif;
+    }
+
+
+    .flex-row .col span.underline {
+      border-color: white;
+      width: 100%;
+    }
+
   </style>
   </head>
-  <body>
+  <body style="background-color: #121111;">
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -137,13 +202,13 @@
     </a>
   </div>
 </div>
-<div class="container" style="background-color: transparent; margin-top: -40px;">
+<!-- <div class="container" style="background-color: transparent; margin-top: -40px;">
   <div class="row">
     <div class="col-md-12">
       <div class="top-spacer"> </div>
     </div>
   </div> 
-</div><!-- /cont -->
+</div> --><!-- /cont -->
 <div class="container">
   <div class="row">
     
@@ -158,37 +223,47 @@
 
           <div class="row" id="features">    
             <div class="col-md-12">
-              <div class="heading3">
-                <h3>Features
-                  <span class="underline"></span>
-                </h3>
-              </div>
-              <div class="row">
-                <div class="col-sm-4 col-lg-4 col">
-                  <ul>
-                    <li>Installs in hours</li>
-                    <li>Operator never has to leave the cab</li>
-                    <li>Bucket folds up</li>
-                  </ul>
+
+              <div class="row flex-row">
+                <div class="col-xs-12 col-sm-3 col-lg-4 col">
+                  <!-- <div class=""> -->
+                    <h3>Why Bayonet
+                      <!-- <span class="underline"></span> -->
+                    </h3>
+                 <!--  </div> -->
                 </div>
-                <div class="col-sm-4 col-lg-4 col">
+                <div class="col-xs-12 col-sm-4 col-lg-4 col">
                   <ul>
+                    <li>Low Maintenence</li>
+                    <li>Ideal durability</li>
+                    <li>Compact Design</li>
+                  </ul>
+                <!--   <ul>
                     <li>Hammer folds down</li>
                     <li>Ideal durability</li>
                     <li>Allows machine to handle difficult excavating conditions</li>
-                  </ul>
+                    <li>Allows machine to handle difficult excavating conditions</li>
+                    <li>Allows machine to handle difficult excavating conditions</li>
+                  </ul> -->
                 </div>
-                <div class="col-sm-4 col-lg-4 col">
+                <div class="col-xs-12 col-sm-5 col-lg-4 col">
                   <ul>
+                    <li>Installs in hours</li>
+                    <li>Low maintenance</li>
+                    <li>Made in the usa</li>
+                  </ul>
+                  <!-- <ul>
                     <li>No quick disconnect</li>
                     <li>Low maintenance</li>
                     <li>Designed for most models of excavators and rubber tire backhoes</li>
-                  </ul>
+                    <li>Designed for most models of excavators and rubber tire backhoes</li>
+                    <li>Designed for most models of excavators and rubber tire backhoes</li>
+                  </ul> -->
                 </div>
               </div>
-              <br><br>
+<!--               <br><br> -->
             </div>
-          </div> <!-- /features row -->
+          </div> <!-- /#features row -->
           
          <!--  <hr> -->
           
