@@ -27,12 +27,68 @@
     <style>
 
 
-    .gm-style .gm-style-iw {
-       font-size: 10px;
-    }
+/*#ECC057*/
+  
 
 
-    .gm-style-cc { display:none; }
+.gm-style .gm-style-iw {
+   font-size: 10px;
+}
+
+
+.gm-style-cc { display:none; } 
+
+
+.icon-effect { 
+  display: inline-block; 
+  font-size: 0px; 
+  cursor: pointer; 
+  margin: 0 auto; 
+  width: 150px; 
+  height: 150px;
+  border-radius: 50%; 
+  text-align: center; 
+  position: relative; 
+  z-index: 1; 
+  color: #fff; 
+}
+
+.icon-effect:after { 
+  pointer-events: none; 
+  position: absolute; 
+  width: 100%; 
+  height: 100%; 
+  border-radius: 50%; 
+  content: ''; 
+  -webkit-box-sizing: content-box; 
+  -moz-box-sizing: content-box; box-sizing: content-box; 
+}
+
+.icon-effect:before { 
+  speak: none; 
+  font-size: 75px; 
+  line-height: 150px; 
+  font-style: normal; 
+  font-weight: normal; 
+  font-variant: normal; 
+  text-transform: none; 
+  display: block; 
+  -webkit-font-smoothing: antialiased; 
+}
+
+/* Effect 1 */
+.icon-effect-inner .icon-effect { 
+  /*background: rgba(255, 255, 255, 0.1); */
+  background-color: #F6BA04;
+  -webkit-transition: background 0.2s, color 0.2s; 
+  -moz-transition: background 0.2s, color 0.2s; 
+  transition: background 0.2s, color 0.2s; 
+}
+
+.icon-effect:hover {
+  background-color: #d79c00;
+}
+
 
   </style>
   </head>
@@ -156,47 +212,198 @@
           
         <!--/stories-->
 
-          <div class="row" id="features">    
-            <div class="col-md-12">
-              <div class="heading3">
-                <h3>Features
-                  <span class="underline"></span>
-                </h3>
+          <div class="row" id="features">
+            <div class="row-inner">    
+              <div class="col-sm-4 col-lg-4 col">
+                <ul class="list-group features-list">
+                  <li class="list-group-item">Installs in hours</li>
+                  <li class="list-group-item">Operator never has to leave the cab</li>
+                  <li class="list-group-item">Bucket folds up</li>
+                </ul>
               </div>
-              <div class="row">
-                <div class="col-sm-4 col-lg-4 col">
-                  <ul>
-                    <li>Installs in hours</li>
-                    <li>Operator never has to leave the cab</li>
-                    <li>Bucket folds up</li>
-                  </ul>
-                </div>
-                <div class="col-sm-4 col-lg-4 col">
-                  <ul>
-                    <li>Hammer folds down</li>
-                    <li>Ideal durability</li>
-                    <li>Allows machine to handle difficult excavating conditions</li>
-                  </ul>
-                </div>
-                <div class="col-sm-4 col-lg-4 col">
-                  <ul>
-                    <li>No quick disconnect</li>
-                    <li>Low maintenance</li>
-                    <li>Designed for most models of excavators and rubber tire backhoes</li>
-                  </ul>
-                </div>
+              <div class="col-sm-4 col-lg-4 col">
+                <ul class="list-group features-list">
+                  <li class="list-group-item">Hammer folds down</li>
+                  <li class="list-group-item">Ideal durability</li>
+                  <li class="list-group-item">Allows machine to handle difficult excavating conditions</li>
+                </ul>
               </div>
-              <br><br>
-            </div>
+              <div class="col-sm-4 col-lg-4 col">
+                <ul class="list-group features-list">
+                  <li class="list-group-item">No quick disconnect</li>
+                  <li class="list-group-item">Low maintenance</li>
+                  <li class="list-group-item">Designed for most models of excavators and rubber tire backhoes</li>
+                </ul>
+              </div>
+            </div> <!-- / row inner -->
           </div> <!-- /features row -->
           
-         <!--  <hr> -->
-          
+
+
+
+          <div class="row" id="news">  
+            <div class="row-inner">
+              <div class="heading-container"> 
+                <h3>News
+                  <span class="underline"></span>
+                </h3>
+              </div> 
+
+
+              <div class="news-container">
+
+                <div class="col-sm-4">
+                  <div class="news-cta">
+                    <a href="#" class="news-image"><img src="images/image_1.jpg" alt=""></a>
+                    <h4>caption here</h4>
+                  </div>
+                </div>                  
+                <div class="col-sm-4">
+                  <div class="news-cta">
+                    <a href="#" class="news-image"><img src="https://img.youtube.com/vi/CwgMtXH9ni0/hqdefault.jpg" alt=""></a>
+                    <h4>caption here</h4>
+                  </div>
+                </div>                  
+                <div class="col-sm-4">
+                  <div class="news-cta">
+                    <a href="#" class="news-image"><img src="images/image_1.jpg" alt=""></a>
+                    <h4>caption here</h4>
+                  </div>
+                </div>                
+                
+
+              </div>
+
+            </div>   
+          </div> <!-- /news row -->
+
+
+          <div class="row" id="models">
+            <div class="row-inner">
+              <div class="heading-container"> 
+                <h3>Models
+                  <span class="underline"></span>
+                </h3>
+              </div>     
+          <!-- ALWAYS VISIBLE ON ALL DEVICES  -->
+            <div class="model-container">
+              <div class="col">
+                <div class="thumbnail thumb-1">
+                  <div class="caption">
+                    <div class="rank-icon"><i class="rank rank-03-e4-1"></i>&nbsp;&nbsp;Corporal</div>
+                    <h4>Mini Excavator & Rubber Tire Backhoe</h4>
+                    <p>
+                      <ul class="fa-ul">
+                        <li><i class="fa-li fa fa-check"></i><span>Ft. lbs./Blow Class</span> 800</li>
+                        <li><i class="fa-li fa fa-check"></i><span>Work Weight/lbs.</span> 800</li>
+                      </ul>
+                    </p>                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="thumbnail thumb-2">
+                  <div class="caption">
+                    <div class="rank-icon"><i class="rank rank-03-e5"></i>&nbsp;&nbsp;Sergeant</div>
+                    <h4>36,00 - 50,000 Hydraulic Excavator</h4>
+                    <p>
+                      <ul class="fa-ul">
+                        <li><i class="fa-li fa fa-check"></i><span>Ft. lbs./Blow Class</span> 2,500</li>
+                        <li><i class="fa-li fa fa-check"></i><span>Work Weight/lbs.</span> 2,670</li>
+                      </ul>
+                    </p>                    
+                  </div>
+                </div>
+              </div>              
+              <div class="col">
+                <div class="thumbnail thumb-2">
+                  <div class="caption">
+                    <div class="rank-icon"><i class="rank rank-03-e5"></i>&nbsp;&nbsp;Another Product</div>
+                    <h4>36,00 - 50,000 Hydraulic Excavator</h4>
+                    <p>
+                      <ul class="fa-ul">
+                        <li><i class="fa-li fa fa-check"></i><span>Ft. lbs./Blow Class</span> 2,500</li>
+                        <li><i class="fa-li fa fa-check"></i><span>Work Weight/lbs.</span> 2,670</li>
+                      </ul>
+                    </p>                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="thumbnail thumb-1">
+                  <div class="caption">
+                    <div class="rank-icon"><i class="rank rank-03-e8-2"></i>&nbsp;&nbsp;Master Sergeant</div>
+                    <h4>50,000 - 60,000 Hydraulic Excavator</h4>
+                    <p>
+                      <ul class="fa-ul">
+                        <li><i class="fa-li fa fa-check"></i><span>Ft. lbs./Blow Class</span> 3,500</li>
+                        <li><i class="fa-li fa fa-check"></i><span>Work Weight/lbs.</span> 3,310</li>
+                      </ul>
+                    </p>                    
+                  </div>
+                </div>
+              </div>
+          <!-- DEFAULT HIDDEN ON XSMALL DEVICES / OPEN ON SMALL+ DEVICES -->
+            <!-- <div class="collapse" aria-expanded="false" id="demo">   -->
+              
+              <div class="col">
+                <div class="thumbnail thumb-1">
+                  <div class="caption">
+                    <div class="rank-icon"><i class="rank rank-03-e9-3"></i>&nbsp;&nbsp;Sergeant Major</div>
+                    <h4>60,000 - 85,000 Hydraulic Excavator</h4>
+                    <p>
+                      <ul class="fa-ul">
+                        <li><i class="fa-li fa fa-check"></i><span>Ft. lbs./Blow Class</span> 5,000</li>
+                        <li><i class="fa-li fa fa-check"></i><span>Work Weight/lbs.</span> 4,040</li>
+                      </ul>
+                    </p>                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="thumbnail thumb-1">
+                  <div class="caption">
+                    <div class="rank-icon"><i class="rank rank-01-o6"></i>&nbsp;&nbsp;Colonel</div>
+                    <h4>85,000 - 110,000 Hydraulic Excavator</h4>
+                    <p>
+                      <ul class="fa-ul">
+                        <li><i class="fa-li fa fa-check"></i><span>Ft. lbs./Blow Class</span> 7,500</li>
+                        <li><i class="fa-li fa fa-check"></i><span>Work Weight/lbs.</span> 5,400</li>
+                      </ul>
+                    </p>                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="thumbnail thumb-1">
+                  <div class="caption">
+                    <div class="rank-icon"><i class="rank rank-01-o10"></i>&nbsp;&nbsp;General</div>
+                    <h4>110,000 - 200,000 Hydraulic Excavator</h4>
+                    <p>
+                      <ul class="fa-ul">
+                        <li><i class="fa-li fa fa-check"></i><span>Ft. lbs./Blow Class</span> 11,000</li>
+                        <li><i class="fa-li fa fa-check"></i><span>Work Weight/lbs.</span> 9,270</li>
+                      </ul>
+                    </p>                    
+                  </div>
+                </div>
+              </div>  
+
+            </div><!-- </model-container> -->
+
+            <!-- <button class="btn visible-xs" data-toggle="collapse" data-target="#demo">Collapsible</button> -->
+
+            </div> <!-- / row inner -->
+          </div> <!-- /features row -->
 
 
           
-          <div class="row" id="specs">    
-           <!--  <br> -->
+<!--           <div class="row" id="specs">    
+            <div class="col-md-12">
              <div class="heading3">
                 <h3>Models
                   <span class="underline"></span>
@@ -324,71 +531,26 @@
                     </div>
                   </div>
                 </div>
-              </div> 
+                </div> 
+              </div>
             </div>        
-          </div> <!-- /specs row -->
-          
-          <div class="row" id="news">    
-            <div class="heading3"> 
-                <h3>About Us
-                  <span class="underline"></span>
-                </h3>
-              </div> 
-            <br>
-            <div class="col-md-4 col-xs-12 col-sm-4 text-center">
-              <a class="story-title" href="#"><img alt="" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Image&w=150&h=150" style="width:175px;height:175px;margin-bottom: 10px;" class="img-circle"></a>
-              <h4><i class="fa fa-camera"></i>&nbsp;&nbsp;PHOTOS</h4>
-              <ul class="patents">
-                  <li><a href="#"><i class="glyphicon glyphicon-link"></i> Photo Link 1</a></li>
-                  <li><a href="#"><i class="glyphicon glyphicon-link"></i> Photo Link 2</a></li>
-                  <li><a href="#"><i class="glyphicon glyphicon-link"></i> Photo Link 3</a></li>
-                  <li><a href="#"><i class="glyphicon glyphicon-link"></i> Photo Link 4</a></li>
-              </ul>
-              <br class="">
-              <br class="">
-            </div>      
-            <div class="col-md-4 col-xs-12 col-sm-4 text-center">
-              <!-- <i class="fa fa-trophy fa-2x" aria-hidden="true"></i> -->
-              <a class="story-title" href="#"><img alt="" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Image&w=150&h=150" style="width:175px;height:175px;margin-bottom: 10px;" class="img-circle"></a>
-              <h4><i class="fa fa-trophy"></i>&nbsp;&nbsp;PATENTS</h4>
-              <ul class="patents">
-                <li>US 6,430,849 B1</li>
-                <li>US 6,751,896 B2</li>
-                <li>US 7,117,618 B2</li>
-                <li>US 7,257,910 B2</li>
-              </ul>
-              <br class="">
-              <br class="">
-            </div>    
-
-            <div class="col-md-4 col-xs-12 col-sm-4 text-center">
-              <a class="story-title" href="#"><img alt="" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Image&w=150&h=150" style="width:175px;height:175px;margin-bottom: 10px;" class="img-circle"></a>
-              <h4><i class="fa fa-video-camera"></i>&nbsp;&nbsp;NEWS</h4>
-              <ul class="patents">
-                  <li><a href="#"><i class="glyphicon glyphicon-link"></i> News Link 1</a></li>
-                  <li><a href="#"><i class="glyphicon glyphicon-link"></i> News Link 2</a></li>
-                  <li><a href="#"><i class="glyphicon glyphicon-link"></i> News Link 3</a></li>
-                  <li><a href="#"><i class="glyphicon glyphicon-link"></i> News Link 4</a></li>
-              </ul>
-              <br class="">
-              <br class="">
-            </div>                      
-          </div> <!-- /news row -->
+          </div>  -->
+          <!-- /specs row -->
           
 
 
-
-          <br><br>
           
+
+
           <div class="row" id="contact-us">   
-            <div class="col-md-12">
-              <div class="heading3"> 
+            <div class="row-inner">
+              <div class="heading-container"> 
                 <h3>Find Us
                   <span class="underline"></span>
                 </h3>
               </div>
-              <br>
-              <div class="row contact-row">
+<!--               <br> -->
+              <!-- <div class="row contact-row"> -->
                 
                 <div class="col-xs-12 col-sm-4 col-lg-4 contact-item">
                     <address>
@@ -421,16 +583,13 @@
                     </address>                    
                     <a href="/" style="text-decoration: none; border:0;" class="btn btn-primary btn-large">Contact Us&nbsp;&nbsp;<i class="glyphicon glyphicon-envelope"></i></a>
                 </div>  
-              </div> <!-- /inner contact- row -->
-            </div>  <!-- /COL 12 -->
+              <!-- </div> -->
+            </div> <!-- /inner- row -->
           </div> <!-- /contact row -->
+  
 
-          
-        <!--/stories-->
 
-          <!-- <a href="/" class="btn btn-success">More <i class="glyphicon glyphicon-chevron-right"></i></a> -->
-          
-          
+
         </div> <!-- /panel body -->
       </div> <!-- /panel -->                    
     </div><!--/col-12-->
@@ -463,6 +622,8 @@
   </div> -->
 
 <hr class="no-border">
+
+
 
 <footer>
   <div class="container">
@@ -572,14 +733,35 @@
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
-    <!-- <script src="scripts/main.js"></script> -->
+    <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
     <script src="/scripts/maps.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA14CxnGqqgtwkr_LQt9iT4L8hePZa4-pQ&libraries=places&callback=initMap"
         async defer></script>    
 
+    <script>
+    
+    function findWidth(wWidth) {
+      if(wWidth >= 767) {
+        $('#demo').collapse("show");
+        console.log('showing all!'); 
+      } else {
+        $('#demo').collapse("hide");
+        console.log('hiding some!');
+      }
+    }
+    
+    var startWidth = $(window).width();
+    findWidth(startWidth);
 
+
+    $(window).on('resize', function() {
+      var currWidth = $(this).width();
+      findWidth(currWidth);
+    });
+
+    </script>
 
   </body>
 </html>
