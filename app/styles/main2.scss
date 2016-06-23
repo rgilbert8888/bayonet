@@ -75,7 +75,9 @@ div.bg-design {
   
 /* GENERAL LAYOUT
 -------------------------------------------------- */
-
+html {
+  font-size: 19px;
+}
 body {
   background-color: $bg-color;
   font-family: "Roboto Condensed","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
@@ -119,7 +121,8 @@ h4 {
   width: 100%;
   text-align: center;
   /*border: 1px solid blue;*/
-  padding: 2em 0;
+  padding-top: 2.5em;
+  padding-bottom: 3.5em;
 
   h3 {
     margin: 0 auto;
@@ -279,7 +282,7 @@ ol.carousel-indicators {
 
 #features, #specs, #news, #contact-us, #models {
   /*border: 1px solid;*/
-  padding: 2.5%;
+  padding: 4% 3%;
 
   .row-inner{
  /*   border: 1px solid red;
@@ -289,8 +292,14 @@ ol.carousel-indicators {
 
 
 #features {
-
+    padding-top: 0;
     color: white;
+
+    h3 {
+      color: white;
+      font-weight: lighter;
+      margin-left: 0;
+    }
 
     .features-list {
       border: 0;
@@ -309,53 +318,80 @@ ol.carousel-indicators {
       font-size: $font-size-h4;
       padding-left: 0;
       padding-right: 0;
+
+      &:before {
+        /*Using a Bootstrap glyphicon as the bullet point*/
+        content: "\e080";
+        font-family: 'Glyphicons Halflings';
+        font-size: 11px;
+        float: left;
+        margin-top: 4px;
+        margin-left: -17px;
+        line-height: 18px;
+        color: $logo-yellow;
+
+      }
     }
 }
 
 /*=========================*/ 
 
 #news {
-background-color: white;
-.col-sm-4 {
-  position: relative;
-  @media (min-width: 768px) {
-      width: 33.33333%;
-  }
-}
+  background-color: white;
 
-.news-cta {
-  margin-bottom: 15px;
-  @media screen and (min-width: 768px) {
-    margin-bottom: 0;
-  }
-}
+  .news-cta {
+    margin-bottom: 25px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
 
-.news-image {
-  display: block;
-  line-height: 0;
-  border-bottom: 5px solid #ffc324;
-  margin-bottom: 25px;
-  overflow: hidden;
-  background-color: #000;
-  text-align: center;
-  
+    h4 {
+      color: #d79c00;
+      transition: transform .2s ease-in-out;
 
-  &:hover {
-    border-bottom-color: #d79c00;
+      &:hover {
+        font-weight: bold;
+      }
+    }
+    
+
   }
 
-  /*max-height: 200px;*/
-
-  img {
-    width:auto!important;
-    height:auto;
-    max-width:100%!important;
+  .news-image {
+    display: block;
+    line-height: 0;
+    border-bottom: 5px solid #ffc324;
+    // margin-bottom: 25px;
+    overflow: hidden;
+    background-color: #000;
+    text-align: center;
+    min-height: 200px;
+    // max-width: 323px;
     transition: transform .2s ease-in-out;
+    
+
+    &:hover {
+      border-bottom-color: #d79c00;
+      // filter: blur(10px);
+    }
+
   }
-  
-}
 
 
+    .news-1 {
+      background: url('../images/image_1.jpg') center center no-repeat;
+      background-size: cover;
+    }    
+
+    .news-2 {
+      background: url('https://img.youtube.com/vi/CwgMtXH9ni0/hqdefault.jpg') center center no-repeat;
+      background-size: cover;
+    }    
+
+    .news-3 {
+      background: url('https://img.youtube.com/vi/CwgMtXH9ni0/hqdefault.jpg') center center no-repeat;
+      background-size: cover;
+    }
 }
 
 /*=========================*/ 
@@ -368,10 +404,15 @@ background-color: white;
   h3 {
     color: white;
   }
+
   .model-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
+    
+    @media (min-width: 998px) {
+      justify-content: center;
+    }
   } 
 
   .col {
@@ -388,35 +429,44 @@ background-color: white;
     @media (min-width: 498px) {
       display: flex;
       flex-direction: column;
-      padding: 0.5%;
-      flex-basis: 49%;
+      padding: 1%;
+      flex-basis: 48%;
     }   
   /* MEDIUM*/
     @media (min-width: 768px) {
-      display: flex;
-      padding: 0.5%;
-      flex-basis: 32.333%;
+      // display: flex;
+      // padding: 1%;
+      flex-basis: 31.333%;
     }   
   
   /*LARGE - if the max viewport is 920px, we would like the number of items per row to be limited to four */
-    @media (min-width: 998px) {
-      display: flex;
-      padding: 0.5%;
-      flex-basis: 24%;
-    }
+    // @media (min-width: 998px) {
+    //   // display: flex;
+    //   padding: 1%;
+    //   // background-color: pink;
+    //   flex-basis: 23%;
+    // }
   }
 
   .thumbnail { 
-    flex-grow: 1;
+    flex: 1;
     align-self: stretch;
-    background: #ffc324;
-    background: -webkit-linear-gradient(top,#fee86b,#ffc324);
-    background: linear-gradient(180deg,#fee86b 0,#ffc324);
+    // background: #ffc324;
+    // background: -webkit-linear-gradient(top,#fee86b,#ffc324);
+    // background: linear-gradient(180deg,#fee86b 0,#ffc324);
+    padding: 20px 10px;
+    margin-bottom: 15px;
     max-width: 100%;
     max-height: 100%;
     border: none;
     border-radius: 0;
-
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff, #e0e0e0);
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e0e0e0));
+    background: -webkit-linear-gradient(left top, left bottom, #ffffff, #e0e0e0);
+    background: -o-linear-gradient(top, #ffffff, #e0e0e0);
+    background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+    
     @media (min-width: 498px) {
       margin-bottom:0;
     } 
@@ -429,7 +479,9 @@ background-color: white;
     }
     .rank-icon {
       text-transform: uppercase;
-      border-bottom: 2px solid #333333;
+      font-style: italic;
+      // border-bottom: 2px solid #333333;
+      border-bottom: 3px solid #ffc324;
       font-size: 18px;
       font-weight: 700;
       /*font-style: italic;*/
@@ -442,6 +494,14 @@ background-color: white;
 
 
 #contact-us {
+
+  background: #ECBB52;
+  background: linear-gradient(to bottom, $logo-yellow, #E0D07F);
+
+  h3 {
+    color: #333333;
+  }
+
   .btn-primary {
     border:0;
     background-color: #538FEC;
