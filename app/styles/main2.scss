@@ -94,6 +94,7 @@ body {
   /*background-color: #DDDDDD;*/
   border: 0;
   background-color: #303030;
+  padding-bottom: 0;
 }
 
 
@@ -252,16 +253,25 @@ footer {
 
 }
 
-.static-header .carousel-caption {
+#masthead .static-header .carousel-caption {
   text-align: left;
   position: absolute;
   z-index: 15;
-  top: 30%;
+  bottom: 10%;
   color: $logo-yellow;
   
   h1 { 
-    font-size: 4.5em;
-    letter-spacing: .05em; 
+    /*font-size: 4.5em;*/
+    line-height: 0.85;
+    letter-spacing: -.05em; 
+    color: white;
+    font-weight: normal;
+
+    span {
+      color: $logo-yellow;
+      font-weight: lighter;
+      display: block;
+    }
   }
 }
 
@@ -304,10 +314,7 @@ ol.carousel-indicators {
     .features-list {
       border: 0;
       margin: 0;
-      margin-bottom: 15px;
-      @media screen and (min-width: 768px) {
-        margin-bottom: 0;
-      }
+
     }
 
     .features-list li  {
@@ -318,6 +325,8 @@ ol.carousel-indicators {
       font-size: $font-size-h4;
       padding-left: 0;
       padding-right: 0;
+      padding-top: 5px; 
+      padding-bottom: 5px;
 
       &:before {
         /*Using a Bootstrap glyphicon as the bullet point*/
@@ -330,6 +339,12 @@ ol.carousel-indicators {
         line-height: 18px;
         color: $logo-yellow;
 
+      }
+
+
+
+      @media screen and (min-width: 768px) {
+        padding: 10px 15px;
       }
     }
 }
@@ -398,7 +413,11 @@ ol.carousel-indicators {
 
 
 #models {
-  background-color: #303030;
+  /*background-color: #303030;*/
+  background: #ECBB52;
+background-image:
+radial-gradient(ellipse at center, rgba(153,218,255,0.09) 0%, rgba(51,51,51,1) 100%),
+url('../images/ground.jpg');
 
 
   h3 {
@@ -434,38 +453,37 @@ ol.carousel-indicators {
     }   
   /* MEDIUM*/
     @media (min-width: 768px) {
-      // display: flex;
-      // padding: 1%;
+/*      // display: flex;
+      // padding: 1%;*/
       flex-basis: 31.333%;
     }   
   
   /*LARGE - if the max viewport is 920px, we would like the number of items per row to be limited to four */
-    // @media (min-width: 998px) {
+/*    // @media (min-width: 998px) {
     //   // display: flex;
     //   padding: 1%;
     //   // background-color: pink;
     //   flex-basis: 23%;
-    // }
+    // }*/
   }
 
   .thumbnail { 
     flex: 1;
     align-self: stretch;
-    // background: #ffc324;
-    // background: -webkit-linear-gradient(top,#fee86b,#ffc324);
-    // background: linear-gradient(180deg,#fee86b 0,#ffc324);
     padding: 20px 10px;
     margin-bottom: 15px;
     max-width: 100%;
     max-height: 100%;
     border: none;
     border-radius: 0;
-    background: #ffffff;
+    background-color:#F3F3F3;
+    /*background-color: rgb(232,232,232);*/
+    /*background: #ffffff;
     background: -moz-linear-gradient(top, #ffffff, #e0e0e0);
     background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e0e0e0));
     background: -webkit-linear-gradient(left top, left bottom, #ffffff, #e0e0e0);
     background: -o-linear-gradient(top, #ffffff, #e0e0e0);
-    background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+    background: linear-gradient(to bottom, #ffffff, #e0e0e0);*/
     
     @media (min-width: 498px) {
       margin-bottom:0;
@@ -479,7 +497,7 @@ ol.carousel-indicators {
     }
     .rank-icon {
       text-transform: uppercase;
-      font-style: italic;
+      /*font-style: italic;*/
       // border-bottom: 2px solid #333333;
       border-bottom: 3px solid #ffc324;
       font-size: 18px;
@@ -494,20 +512,116 @@ ol.carousel-indicators {
 
 
 #contact-us {
+ background-color: #303030;
+/*background: #ECBB52;
+background-image:
+radial-gradient(ellipse at center, rgba(153,218,255,0.09) 0%, rgba(51,51,51,1) 100%),
+url('../images/ground.jpg');*/
+color: white;
+/*linear-gradient(to bottom, rgba(246,186,4,0.9), rgba(224,208,127,0.7)), */
+h3, h4 {
+  color: white;
+}
 
-  background: #ECBB52;
-  background: linear-gradient(to bottom, $logo-yellow, #E0D07F);
+input, textarea {
+  border: 0;
+  border-radius: 0;
+}
 
-  h3 {
-    color: #333333;
+textarea#message {
+  height: 200px;
+}
+
+address {
+  text-align: center;
+  @media (min-width: 498px) {
+    text-align: left;
+  } 
+}
+#map-canvas {
+  color: #333333;
+    #map {
+      /*@include border-radius(50%);*/
+      background: $panel-color;
+      margin: 0 auto;
+      width: 100% !important;
+      height: 200px;
+      border: 0;
+/*      padding-left: 15px;
+      padding-right: 15px;*/
+/*      height: 300px;
+      width: 300px;*/
+     /* overflow: hidden;
+      position: relative;*/
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+button.contact-button {
+  border:0;
+  background-color: white;
+  border-radius: 0;
+  color: #333333;
+  text-transform: uppercase; 
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.contact-item {
+  flex-grow: 1;
+/*  flex-basis: 33.33%;*/
+  border:1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: stretch;
+
+  address > h3 {
+    font-weight: lighter;
   }
+}
 
-  .btn-primary {
-    border:0;
-    background-color: #538FEC;
-    border-radius: 0;
-  }
-  .contact-row {
+/*.has-map {
+  padding: 0;
+  flex-grow: 0;
+  order: 3;
+}*/
+/*  .contact-row {
     display: flex;
     align-items: stretch;
     align-content: stretch;
@@ -527,22 +641,9 @@ ol.carousel-indicators {
       address {
         text-align: center;
       }
-    }
+    }*/
 
-  #map-canvas {
-    /*position: relative;*/
 
-      #map {
-        @include border-radius(50%);
-        background: $panel-color;
-        margin: 0 auto;
-        width: 300px;
-        height: 300px;
-        border:1px solid $brdr-grey;
-       /* overflow: hidden;
-        position: relative;*/
-      }
-  }
 }
 
 

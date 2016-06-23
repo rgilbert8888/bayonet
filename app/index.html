@@ -89,8 +89,17 @@
   background-color: #d79c00;
 }
 
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
+}
 
-  </style>
+
+ </style>
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -105,9 +114,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <div class="header-logo">
-        <a href="" class="block-logo"><img src="/images/header.png" alt=""></a>
-      </div>
+              <a class="navbar-brand" href="#"><img src="images/crane2.png" alt="Dispute Bills">
+        </a>
+     <!--  <div class="header-logo">
+        <a href="" class="block-logo">
+          <img src="/images/header.png" alt="">
+          <img src="images/header-text-yellow.png" alt="">
+        </a>
+      </div> -->
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-right navbar-nav">
@@ -144,44 +158,54 @@
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class=""></li>
       <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-      <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+      <li data-target="#myCarousel" data-slide-to="3" class="active"></li>
     </ol>
 
     <div class="carousel-inner" role="listbox">
       
-      <!-- <div class="static-header"> -->
-        <div class="container heading-container">
+      <div class="static-header">
+        <div class="container">
           <div class="carousel-caption">
-            <h1>BAYONET</h1>
+            <h1>BAYONET<span> Breaker</h1>
           </div>
         </div>
-      <!-- </div> -->
+      </div>
       
 
-      <div class="item" style="background-image: url('http://bayonetbreaker.com/images/bayonet/175-new-holland-excavator2.jpg')">
+      <div class="item" style="background-image: url('images/slideshow-images/290_Hyundai_Excavator.jpg')">
         <!-- <img class="first-slide" src="http://bayonetbreaker.com/images/bayonet/175-new-holland-excavator2_sm.jpg" alt="First slide"> -->
         <div class="container">
           <div class="carousel-caption">
-            <h2>Is Simple.</h2>
-            <p class="lead">With a <strong>Bayonet Breaker</strong>, excavating in rock is a one-machine job</p>
+<!--             <h2>Is Simple.</h2>
+            <p class="lead">With a <strong>Bayonet Breaker</strong>, excavating in rock is a one-machine job</p> -->
           </div>
         </div>
       </div>
-      <div class="item" style="background-image: url('http://bayonetbreaker.com/images/bayonet/290-hyundai-excavator-bayonet1.jpg')">
+      <div class="item" style="background-image: url('images/slideshow-images/430E_Cat Backhoe_Corporal.jpg')">
        <!--  <img class="second-slide" src="http://bayonetbreaker.com/images/bayonet/590-case-backhoe2_sm.jpg" alt="Second slide"> -->
         <div class="container">
           <div class="carousel-caption">
-            <h2>Is Compact.</h2>
+<!--             <h2>Is Compact.</h2>
             <p class="lead">One machine, one attachment</p>
-          </div>
+ -->          </div>
+        </div>
+      </div>      
+      <div class="item" style="background-image: url('images/slideshow-images/Sany_75_Corproal2.jpg')">
+       <!--  <img class="second-slide" src="http://bayonetbreaker.com/images/bayonet/590-case-backhoe2_sm.jpg" alt="Second slide"> -->
+        <div class="container">
+          <div class="carousel-caption">
+<!--             <h2>Is Compact.</h2>
+            <p class="lead">One machine, one attachment</p>
+ -->          </div>
         </div>
       </div>
-      <div class="item active" style="background-image: url('http://bayonetbreaker.com/images/bayonet/mx35-ditch-witch-excavator1.jpg')">
+      <div class="item active" style="background-image: url('images/slideshow-images/DSC_0370.JPG')">
         <!-- <img class="third-slide" src="http://bayonetbreaker.com/images/bayonet/city-of-fort-worth-bayonet3_sm.jpg" alt="Third slide"> -->
         <div class="container">
           <div class="carousel-caption">
-            <h2>Is Efficient.</h2>
-            <p class="lead">The newest excavating technology available</p>
+<!--             <h2>Is Efficient.</h2>
+            <p class="lead">The newest excavating technology available</p> -->
           </div>
         </div>
       </div>
@@ -429,12 +453,70 @@
                   <span class="underline"></span>
                 </h3>
               </div>
-<!--               <br> -->
-              <!-- <div class="row contact-row"> -->
-                
-                <div class="col-xs-12 col-sm-4 col-lg-4 contact-item">
+              <div class="col-md-7">
+                <p>Questions about the Bayonet? Send us a message!</p>
+                <div class="form">
+
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="first-name" class="sr-only sr-only-focusable">First Name</label>
+                        <input type="text" class="form-control" id="first-name" placeholder="First Name">
+                      </div>
+                    </div>                    
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="last-name" class="sr-only sr-only-focusable">Last Name</label>
+                        <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-6">
+                      <div class="form-group">
+                        <label for="company" class="sr-only sr-only-focusable">Phone</label>
+                        <input type="text" class="form-control" id="phone" placeholder="Phone">
+                      </div>
+                    </div>                    
+                    <div class="col-xs-6 col-sm-6">
+                      <div class="form-group">
+                        <label for="email" class="sr-only sr-only-focusable">Email</label>
+                        <input type="text" class="form-control" id="email" placeholder="Email">
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label for="company" class="sr-only sr-only-focusable">Company</label>
+                        <input type="text" class="form-control" id="company" placeholder="Company">
+                      </div>
+                    </div>
+                  </div>     
+                    
+
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label for="message" class="sr-only sr-only-focusable">Message</label>
+                        <textarea id="message" class="form-control" placeholder="Add Your Message"></textarea>
+                      </div>
+                    </div>     
+                  </div>                 
+                </div>
+                <button type="button" class="btn btn-default btn-md contact-button">
+                  <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;&nbsp;SUBMIT
+                </button>
+              </div>
+
+              <div class="col-md-5">
+                <div class="row">
+                  <div class="col-sm-6 address1">
                     <address>
-                    <h4>PROSPER LOCATION</h4> 
+                      <h4>PRIMARY LOCATION</h4> 
                       430 Hays Road<br>
                       Prosper, TX 75078 (physical)<br>
                       <br>
@@ -445,14 +527,8 @@
                       972-347-2841<br>
                       Fax-972-346-2600<br>
                     </address>
-                    <!-- <a href="/" style="text-decoration: none; border:0;" class="btn btn-primary">Contact Us&nbsp;&nbsp;<i class="glyphicon glyphicon-comment"></i></a> -->
-                </div> 
-                <div class="col-xs-12 col-sm-4 col-lg-4 contact-item">
-                  <div id="map-canvas">
-                      <div id="map"></div>
                   </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-lg-4 contact-item">
+                  <div class="col-sm-6 address2">                    
                     <address>
                       <h4>RAINBOW LOCATION</h4>
                       4952A Hwy 67E<br>
@@ -460,9 +536,65 @@
                       <br>
                       254-898-0566<br>
                       Fax-254-898-0497<br>
+                    </address>          
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div id="map-canvas">
+                      <div id="map"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+              <!-- <div class="contact-container"> -->
+
+<!--                 <div class="col-xs-12 col-sm-4 col-lg-4 contact-item has-map">
+                  <div id="map-canvas">
+                      <div id="map"></div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-lg-4 contact-item">
+                    <address>
+                    <h3>PROSPER LOCATION</h3> 
+                      430 Hays Road<br>
+                      Prosper, TX 75078 (physical)<br>
+                      <br>
+                      P.O. Box 520<br>
+                      Prosper, TX 75078 (mailing)<br>
+                      <br>
+                      972-346-3226<br>
+                      972-347-2841<br>
+                      Fax-972-346-2600<br>
+                    </address>
+                </div> 
+                <div class="col-xs-12 col-sm-4 col-lg-4 contact-item">
+                    <address>
+                      <h3>RAINBOW LOCATION</h3>
+                      4952A Hwy 67E<br>
+                      Rainbow, TX 76077<br>
+                      <br>
+                      254-898-0566<br>
+                      Fax-254-898-0497<br>
                     </address>                    
-                    <a href="/" style="text-decoration: none; border:0;" class="btn btn-primary btn-large">Contact Us&nbsp;&nbsp;<i class="glyphicon glyphicon-envelope"></i></a>
-                </div>  
+                    <button type="button" class="btn btn-default btn-md contact-button">
+                      <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;&nbsp;Contact Us
+                    </button>
+                </div>   -->
               <!-- </div> -->
             </div> <!-- /inner- row -->
           </div> <!-- /contact row -->
