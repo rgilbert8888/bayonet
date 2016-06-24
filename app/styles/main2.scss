@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700);
 @import 'partials/_colors';
 @import 'partials/_mixins';
 @import 'partials/_fonts';
@@ -195,6 +194,54 @@ h4 {
   text-transform: uppercase;
 }
 
+
+/* FOLLOWING PAGES HEADER
+-------------------------------------------------- */
+.next-page-header {
+
+
+  background-color: #e0e0e0;
+/*  background: #ECBB52;*/
+background-image:
+linear-gradient(to right, rgba(51,51,51,1), rgba(153,218,255,0.08)), 
+url('../images/crane-faded.png');
+background-repeat: no-repeat;
+background-position: top right;
+background-size: cover;
+@media screen and (min-width: 768px) {
+     background-size: contain;
+    }
+
+/*  background-image:
+  linear-gradient(to right, rgba(51,51,51,1), rgba(153,218,255,0.09));
+  */
+  .container {
+    padding: 20px;
+    padding-bottom: 30px;
+  }
+
+  h1 {
+    color: white;
+    line-height: 0.85;
+    letter-spacing: -.05em;
+    font-weight: lighter;
+
+    span {
+      color: $logo-yellow;
+      font-weight: normal;
+    } 
+  }
+
+  h4 {
+    color: white;
+  }
+
+
+
+}
+
+
+
 /* FOOTER
 -------------------------------------------------- */
 footer {
@@ -210,8 +257,8 @@ footer {
 
   ul {
     list-style: none;
-    padding: 0;
-    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
   }
 
 
@@ -265,11 +312,11 @@ footer {
     line-height: 0.85;
     letter-spacing: -.05em; 
     color: white;
-    font-weight: normal;
+    font-weight: lighter;
 
     span {
       color: $logo-yellow;
-      font-weight: lighter;
+      font-weight: normal;
       display: block;
     }
   }
@@ -290,7 +337,7 @@ ol.carousel-indicators {
 /* SECTIONS 
 -------------------------------------------------- */
 
-#features, #specs, #news, #contact-us, #models {
+#features, #specs, #news, #contact-us, #models, #gallery {
   /*border: 1px solid;*/
   padding: 4% 3%;
 
@@ -368,8 +415,6 @@ ol.carousel-indicators {
         font-weight: bold;
       }
     }
-    
-
   }
 
   .news-image {
@@ -404,17 +449,89 @@ ol.carousel-indicators {
     }    
 
     .news-3 {
-      background: url('https://img.youtube.com/vi/CwgMtXH9ni0/hqdefault.jpg') center center no-repeat;
+      background: url('../images/parts.jpg') center center no-repeat;
       background-size: cover;
     }
 }
+
+
+
+/*======= GALLERY ==========*/
+
+#gallery {
+
+  .caption p {
+    color: white;
+  }
+
+
+  #gallery_1 {
+    background-image: url('../images/gallery-images/1_Case_580_Corporal.jpg');
+  }
+  #gallery_2 {
+    background-image: url('../images/gallery-images/2_JCB3XC_Corporal3.jpg');
+  }  
+  #gallery_3 {
+    background-image: url('../images/gallery-images/3_Military_Corporal_580 Case6.jpg');
+  }  
+  #gallery_4 {
+    background-image: url('../images/gallery-images/4_Sany75_Corproal2.jpg');
+  }  
+  #gallery_5 {
+    background-image: url('../images/gallery-images/5_CAT299_SS800.jpg');
+  } 
+  #gallery_6 {
+    background-image: url('../images/gallery-images/6_Case75C_SS800.jpg');
+  }  
+  #gallery_7 {
+    background-image: url('../images/gallery-images/7_bayonet-in-rock.jpg');
+  }  
+  #gallery_8 {
+    background-image: url('../images/gallery-images/8_290-hyundai-excavator-bayonet2.jpg');
+  }  
+  #gallery_9 {
+    background-image: url('../images/gallery-images/9_mx35-ditch-witch-exc.jpg');
+  }
+
+
+.image-container {
+    /*background-position: 10px; */
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+
+.thumbnail {
+    min-height: 140px;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 5px solid $logo-yellow;
+    transition: transform .2s ease-in-out;
+
+    @media (min-width: 498px) {
+      min-height: 200px;
+    }     
+
+    &:hover {
+      border-bottom-color: #d79c00;
+    }
+
+  }
+}
+
+
+
+
+
+
+
 
 /*=========================*/ 
 
 
 #models {
   /*background-color: #303030;*/
-  background: #ECBB52;
+background: #ECBB52;
 background-image:
 radial-gradient(ellipse at center, rgba(153,218,255,0.09) 0%, rgba(51,51,51,1) 100%),
 url('../images/ground.jpg');
@@ -555,16 +672,6 @@ address {
       position: relative;*/
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 

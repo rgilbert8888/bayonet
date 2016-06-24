@@ -22,7 +22,8 @@ function initMap() {
 
 
       // for geocode part - sets infoWindow text to loc address
-        var placeId = 'ChIJJZaZrJs_TIYRAfap06LN3R0';
+        // var placeId = 'ChIJJZaZrJs_TIYRAfap06LN3R0';
+        var placeId = 'ChIJJ63x_5o_TIYR4du20kfYs5Y';
 
       // make the map 
         var latlng = new google.maps.LatLng(33.239547, -96.7863377);
