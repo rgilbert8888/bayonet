@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>bayonet</title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
     <!-- Place favicon.ico in the root directory -->
 
     <!-- build:css styles/vendor.css -->
@@ -31,12 +31,7 @@
   
 
 
-.gm-style .gm-style-iw {
-   font-size: 10px;
-}
 
-
-.gm-style-cc { display:none; } 
 
 
 .icon-effect { 
@@ -413,30 +408,30 @@ p {
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
-    <script src="/scripts/maps.js"></script>
+<!--     <script src="/scripts/maps.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA14CxnGqqgtwkr_LQt9iT4L8hePZa4-pQ&libraries=places&callback=initMap"
-        async defer></script>    
+        async defer></script>     -->
 
     <script>
     
-    function findWidth(wWidth) {
-      if(wWidth >= 767) {
-        $('#demo').collapse("show");
-        console.log('showing all!'); 
-      } else {
-        $('#demo').collapse("hide");
-        console.log('hiding some!');
-      }
-    }
+    // function findWidth(wWidth) {
+    //   if(wWidth >= 767) {
+    //     $('#demo').collapse("show");
+    //     console.log('showing all!'); 
+    //   } else {
+    //     $('#demo').collapse("hide");
+    //     console.log('hiding some!');
+    //   }
+    // }
     
-    var startWidth = $(window).width();
-    findWidth(startWidth);
+    // var startWidth = $(window).width();
+    // findWidth(startWidth);
 
 
-    $(window).on('resize', function() {
-      var currWidth = $(this).width();
-      findWidth(currWidth);
-    });
+    // $(window).on('resize', function() {
+    //   var currWidth = $(this).width();
+    //   findWidth(currWidth);
+    // });
 
     </script>
 

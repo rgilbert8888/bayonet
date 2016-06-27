@@ -3,7 +3,7 @@
 // This code loads the IFrame Player API code asynchronously.
   var tag = document.createElement('script');
 
-  tag.src = "https://www.youtube.com/iframe_api";
+  tag.src = 'https://www.youtube.com/iframe_api';
   var firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
@@ -64,8 +64,8 @@ $(document).on('ready', function(){
 		    
 		    // distanceIncludingNav = (distance + navHeight);
 		   
-		    console.log(distance);
-		    console.log(navHeight);
+		    // console.log(distance);
+		    // console.log(navHeight);
 
 	 // when distance from top is zero + navheight, do this:
 		   
