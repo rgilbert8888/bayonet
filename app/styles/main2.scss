@@ -6,9 +6,6 @@
 $icon-font-path: '../fonts/';
 
 
-// bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-// endbower
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -369,7 +366,8 @@ ol.carousel-indicators {
       border:0;
       font-weight: normal;
       color: white; 
-      font-size: $font-size-h4;
+      // font-size: $font-size-h4;
+      font-size: 20px;
       padding-left: 0;
       padding-right: 0;
       padding-top: 5px; 
